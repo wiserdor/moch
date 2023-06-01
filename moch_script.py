@@ -118,7 +118,7 @@ def check_lottery():
                             f'Order changed for lottery id {item["id"]}\nIn {item["city"]} made on {lottery_date}.\nThe order changed from {last_item["order"]} to {item["order"]}.\nresident order changed from {last_item["resident_order"]} to {item["resident_order"]}.')
 
             # Save the history
-            with open("history.json", "w") as f:
+            with open("history.json", "w", encoding='utf-8') as f:
                 json.dump(history, f, ensure_ascii=False, indent=4)
         else:
             print(f"Failed to get data, status code: {response.status_code}")
