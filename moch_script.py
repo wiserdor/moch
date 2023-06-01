@@ -28,7 +28,7 @@ chat_id = None  # Replace with your chat id
 # Initialize the previous data
 # if there is a history file, load it
 try:
-    with open("history.json", "r") as f:
+    with open("history.json", "r", encoding='utf-8') as f:
         history = json.load(f)
 # otherwise, create a new one
 except FileNotFoundError:
